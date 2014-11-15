@@ -1,0 +1,17 @@
+{
+    "name": "yaseek/instagram",
+    "description": "library for instagram api",
+    "license": "MIT",
+    "autoload": {
+        "classmap": ["lib/"]
+    },
+    "require": {
+        "yaseek/cache": "~0.1"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/yaseek/cache.git"
+        }
+    ]
+}

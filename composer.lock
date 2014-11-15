@@ -1,0 +1,37 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "20865f29565890622a50aa2830995b3e",
+    "packages": [
+        {
+            "name": "yaseek/cache",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yaseek/cache.git",
+                "reference": "286e715cea96517729cf69785d4e84223194c832"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "file cache realisation",
+            "time": "2014-11-15 12:49:25"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "platform": [],
+    "platform-dev": []
+}

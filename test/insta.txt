@@ -1,0 +1,4 @@
+Client ID   c1b6b219a7e942cf891a8274126831f2
+Client Secret   a09e24112fe9435986048a7d231e625f
+Website URL     http://coffee.yaseek.info
+Redirect URI    http://coffee.yaseek.info
