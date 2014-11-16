@@ -1,6 +1,7 @@
 {
     "name": "yaseek/instagram",
     "description": "library for instagram api",
+    "homepage": "https://github.com/yaseek/instagram",
     "license": "MIT",
     "autoload": {
         "classmap": ["lib/"]
