@@ -1,8 +1,6 @@
 <?php
 namespace Yaseek;
 
-require_once dirname( __DIR__ ) . '/vendor/autoload.php';
-
 class Instagram {
 
     const API_URI = 'https://api.instagram.com/v1';
@@ -14,10 +12,9 @@ class Instagram {
 
     public $cache;
 
-    public function __construct($clientId, $cacheDir) {
+    public function __construct($clientId, $cache) {
         $this->clientId = $clientId;
-
-        $this->cache = new Cache($cacheDir, self::CACHE_DURATION);
+        $this->cache = $cache;
     }
 
     private function request($url, $queryObj = FALSE) {
