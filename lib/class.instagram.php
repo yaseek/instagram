@@ -18,11 +18,13 @@ class Instagram {
     }
 
     private function request($url, $queryObj = FALSE) {
-        if (!$queryObj) {
+        if (!is_array($queryObj)) {
             $queryObj = array();
         }
         $queryObj['client_id'] = $this->clientId;
+        //$this->cache->saveData('queryObj', $queryObj);
         $fullurl = self::API_URI . $url . "?" . http_build_query($queryObj);
+        //$this->cache->saveData('fullurl', $fullurl);
         $key = md5($fullurl);
 
         $answer = $this->cache->getData($key);
@@ -52,10 +54,13 @@ class Instagram {
     }
 
     // OPTIONAL QUERY PARAMETERS: COUNT, MIN_TAG_ID, MAX_TAG_ID
-    public function tagsGetMarkedMedia($tag, 
-            $query = array('COUNT'=>self::MAX_DEFAULT_ITEMS)) {
-
+    public function tagsGetMarkedMedia($tag, $query = FALSE) {
+        //$this->cache->saveData('testQuery', $query);
+        if (!is_array($query)) {
+            $query = array('count' => self::MAX_DEFAULT_ITEMS);
+        }
+        
         $url = sprintf("/tags/%s/media/recent", urlencode($tag));
-        return $this->request($url);
+        return $this->request($url, $query);
     }
 }
